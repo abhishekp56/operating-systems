@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+#include<unistd.h>
+
+int main(){
+
+ fork();
+
+printf("PID:  %d  PPID: %d\n",getpid(),
+
+ getppid());
+
+ return 0;
+}
+
+
+PID:  32758  PPID: 32751
+
+PID:  32759  PPID: 32758
