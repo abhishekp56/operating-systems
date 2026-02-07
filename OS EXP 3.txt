@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    int bt[10], wt[10], n, i;
+    printf("n: "); scanf("%d",&n);
+    for(i=0;i<n;i++) scanf("%d",&bt[i]);
+    wt[0]=0;
+    for(i=1;i<n;i++) wt[i]=wt[i-1]+bt[i-1];
+    for(i=0;i<n;i++) printf("%d %d\n",bt[i],wt[i]);
+    return 0;
+}

@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int bt[10], rt[10], n, tq, i, done;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){ scanf("%d",&bt[i]); rt[i]=bt[i]; }
+    scanf("%d",&tq);
+    while(1){
+        done=1;
+        for(i=0;i<n;i++){
+            if(rt[i]>0){
+                done=0;
+                if(rt[i]>tq) rt[i]-=tq;
+                else rt[i]=0;
+            }
+        }
+        if(done) break;
+    }
+    return 0;
+}

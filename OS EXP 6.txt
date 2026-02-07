@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int bt[10], pr[10], n, i, time=0, done;
+    scanf("%d",&n);
+    for(i=0;i<n;i++) scanf("%d%d",&bt[i],&pr[i]);
+    while(1){
+        int hp=-1;
+        done=1;
+        for(i=0;i<n;i++)
+            if(bt[i]>0 && (hp==-1 || pr[i]<pr[hp])) hp=i;
+        if(hp==-1) break;
+        bt[hp]--; time++; done=0;
+    }
+    printf("Time %d",time);
+    return 0;
+}
