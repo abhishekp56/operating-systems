@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+struct block {
+    int data;
+    int next;
+};
+
+int main() {
+    int n, i;
+    printf("Enter number of blocks: ");
+    scanf("%d", &n);
+
+    struct block b[n];
+
+    for(i = 0; i < n; i++) {
+        printf("Enter data for block %d: ", i);
+        scanf("%d", &b[i].data);
+        b[i].next = i+1;
+    }
+    b[n-1].next = -1;
+
+    printf("\nLinked Allocation:\n");
+    for(i = 0; i < n; i++) {
+        printf("Block %d -> Data: %d, Next: %d\n", i, b[i].data, b[i].next);
+    }
+    return 0;
+}
+
+OUTPUT:
+
+Enter number of blocks: 3
+Enter data for block 0: 100
+Enter data for block 1: 200
+Enter data for block 2: 300
+
+Linked Allocation:
+Block 0 -> Data: 100, Next: 1
+Block 1 -> Data: 200, Next: 2
+Block 2 -> Data: 300, Next: -1

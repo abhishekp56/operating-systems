@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    printf("Enter number of records: ");
+    scanf("%d", &n);
+
+    printf("Accessing records sequentially:\n");
+    for(i = 1; i <= n; i++) {
+        printf("Reading Record %d\n", i);
+    }
+    return 0;
+}
+
+
+OUTPUT:
+Enter number of records: 5
+Accessing records sequentially:
+Reading Record 1
+Reading Record 2
+Reading Record 3
+Reading Record 4
+Reading Record 5
+
